@@ -17,7 +17,7 @@
 
 ![컴파일 과정](/images/topcore/01.png)
 
- - compiler : 한 줄씩 해석.
+ - Interpreter : 한 줄씩 해석.
  - JIT compiler : 같은 코드를 매번 해석하지 않고 캐싱하여, 바뀐 부분만 컴파일하고 나머지는 캐싱된 코드를 사용합니다. <span style="text-decoration:underline;">[출처](https://medium.com/@ahn428/java-jit-%EC%BB%B4%ED%8C%8C%EC%9D%BC%EB%9F%AC-c7d068e29f45)</span>
 
 ## 자바에서 String은 불변하는가?
