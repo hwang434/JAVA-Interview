@@ -76,13 +76,40 @@ System.gc();        //Demo 클래스에 오버라이딩된 finalize 실행됨.
   - <span style="color : red;">null key를 허용하고 value로 null 값들이 올 수 있다.</span>
   - <span style="color : blue;">key나 value 둘다 null 허용하지 않음.</span>
 
-## equal Vs ==
+<hr>
+
+## equals() Vs ==
  - equal() 메소드는 Object에 value를 비교한다.
  - == 연산자는 reference(참조)를 비교함.
 
-  - <span style="color : blue;"></span>- <span style="color : red;"></span>
-  - <span style="color : blue;"></span>- <span style="color : red;"></span>
-  - <span style="color : blue;"></span>- <span style="color : red;"></span>
-  - <span style="color : blue;"></span>- <span style="color : red;"></span>
-  - <span style="color : blue;"></span>- <span style="color : red;"></span>
-  - <span style="color : blue;"></span>
+<hr>
+
+## <span style="color : red;">Abstract Class</span> VS <span style="color : blue;">Interface</span>
+ - <span style="color : yellow;">둘다 객체 생성은 불가능하다.</span>
+ - <span style="color : red;">멤버나 생성자를 가짐.</span>
+ - <span style="color : blue;">모든 메서드는 추상 메서드이고, 멤버는 public static final.</span>
+ - <span style="color : blue;">인터페이스는 1.8 버젼부터 default, public static 메서드 지원함.</span>
+``` java
+abstract class AbstractClass {
+    int a = 0;                      //멤버
+    abstract void method01();       //추상메서드
+    
+    AbstractClass() {               //생성자
+
+    }
+
+}
+interface Readable {
+    int a = 4;              //public static final int a = 4;
+    void method01();        //public abstract void method01();
+    
+    //1.8부터
+    default void method02() {
+        //메서드 몸통.
+    }
+    public static void method03() {
+        //메서드 몸통.
+    }
+
+}
+```
